@@ -1,185 +1,199 @@
-SMART TOURISM GUIDE - FULLSTACK PLATFORM
-========================================
+# SMART TOURISM GUIDE - FRONTEND SETUP & STRUCTURE
 
-An intelligent AI-powered tourism platform designed for Tourists, Guides, Artisans, and Admins. The system is structured for scalability, modularity, and mobile readiness across all operating systems including Android, iOS, Huawei, and the Web.
+This document outlines the professional, complete, and scalable frontend setup for the Smart Tourism Guide platform, focusing on building a modern and responsive UI with dynamic service handling, role-based routing, and future-ready deployment.
 
-------------------------------------------------------------
-🌐 PROJECT STRUCTURE
-------------------------------------------------------------
+---
 
-ADRA/
-│
-├── frontend/         # React + Vite + Tailwind UI (PWA Ready)
-│   ├── .env          # VITE_API_BASE for backend
-│   └── src/
-│       ├── auth/     # Login, Signup, JWT, Role Routing
-│       ├── pages/    # Feature pages (Chat, Image, Tools, etc.)
-│       ├── layout/   # Layouts per role
-│       ├── api/      # Fetch wrappers and interceptors
-│       └── hooks/    # Auth / Tab manager / UI logic
+## 🔰 OVERVIEW
 
-├── backend/          # Central API Gateway
-│   ├── routes/       # login, signup, verify
-│   ├── controllers/  # role logic + JWT
-│   ├── middlewares/  # auth guard, error handling
-│   └── utils/        # helper functions
+The **frontend** is a React + TypeScript application using **Vite** for speed, **Tailwind CSS** for modern design, and **PWA-ready configuration** to support deployment on:
 
-└── services/         # Independent Microservices (optional containers)
-    ├── chat-service/
-    ├── image-service/
-    ├── message-service/
-    └── booking-service/
+* Android (Google Play)
+* iOS (App Store)
+* Huawei (AppGallery)
+* Web Browser (PWA)
+* Desktop Web
 
-------------------------------------------------------------
-🔐 AUTHENTICATION DESIGN
-------------------------------------------------------------
+It will act as the **dynamic holder** for all services, where:
 
-- One backend service handles all login/signup.
-- Role-based access is determined after login.
-- JWT token is returned and stored in `localStorage`.
-- Each frontend page or route checks token + role.
-- New actors (Guide, Artisan, Admin) redirect to their dashboards after login.
-- Services themselves don’t handle auth logic.
+* Each service (chat, image, booking...) appears as an application in the UI.
+* If a service is unavailable, it shows a “Coming Soon” page.
+* The UI is built once and never changed when services are added or removed.
 
-------------------------------------------------------------
-🚀 INSTALLATION AND INITIALIZATION
-------------------------------------------------------------
+---
 
-1. Clone Project
-----------------
-git clone https://github.com/your-org/adra-tourism-platform.git
-cd adra-tourism-platform
+## 🚀 FRONTEND SETUP - STEP BY STEP
 
-2. FRONTEND SETUP
------------------
-cd frontend
+**Step 1: Create the Project**
 
-npm create vite@latest -- --template react-ts
-npm install vite@4.4.9 --save-dev
-npm install
-npm install -D tailwindcss@3.4.1 postcss autoprefixer
-npx tailwindcss init -p
+* Navigate to your `frontend` folder:
+  `cd ~/Documents/ADRA/frontend`
+* Create project using Vite:
+  `npm create vite@latest -- --template react-ts`
 
-# Configure tailwind.config.js and index.css properly
+**Step 2: Install Vite**
 
-.env file (example):
---------------------
+* Install exact version used:
+  `npm install vite@4.4.9 --save-dev`
+
+**Step 3: Install Project Dependencies**
+
+* Run full installation:
+  `npm install`
+
+**Step 4: Install Tailwind CSS**
+
+* Install Tailwind + PostCSS:
+  `npm install -D tailwindcss@3.4.1 postcss autoprefixer`
+* Initialize configuration:
+  `npx tailwindcss init -p`
+
+**Step 5: Configure Tailwind**
+
+* In `tailwind.config.js`:
+
+```js
+content: [
+  "./index.html",
+  "./src/**/*.{js,ts,jsx,tsx}",
+]
+```
+
+* In `src/index.css`:
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+**Step 6: Create `.env`**
+
+* In the root of `frontend/`, create `.env`:
+
+```
 VITE_API_BASE=http://localhost:4000
+```
 
-3. BACKEND SETUP
-----------------
-cd ../backend
-npm install
+**Step 7: Create Project Structure**
 
-.env file (example):
---------------------
-PORT=4000
-JWT_SECRET=yourSecretKey
+* Suggested structure:
 
-npm run dev
+```
+frontend/
+├── .env
+├── public/
+├── src/
+│   ├── assets/               → Images, logos
+│   ├── auth/                 → Login, Signup, Role Auth
+│   ├── components/           → Reusable UI components
+│   ├── layout/               → Layouts per role (Tourist, Guide…)
+│   ├── pages/                → Main pages (Home, Chat, Image…)
+│   ├── services/             → API wrappers for each service
+│   ├── store/                → Global state (auth, tabs…)
+│   ├── hooks/                → Custom hooks (useAuth, useTabs…)
+│   ├── utils/                → Helper functions
+│   ├── App.tsx
+│   └── main.tsx
+```
 
-4. START LOCAL DEVELOPMENT
----------------------------
-# Terminal 1: Start backend
-cd backend && npm run dev
+**Step 8: Run the Development Server**
 
-# Terminal 2: Start frontend
-cd frontend && npm run dev
+* Start the frontend:
+  `npm run dev`
+* Access via:
+  `http://localhost:5173`
 
-------------------------------------------------------------
-📱 MOBILE / APP STORE DEPLOYMENT
-------------------------------------------------------------
+---
 
-The frontend is PWA-ready and can also be exported using Capacitor or React Native WebView.
+## 🎯 FRONTEND CORE FEATURES
 
-✅ Android (Google Play)
-✅ iOS (App Store)
-✅ Huawei (AppGallery)
-✅ Web Browser (PWA)
+✅ **Dynamic App Menu (Application-Style UI)**
 
-Use `npm run build` in frontend and wrap with:
-- Capacitor (Recommended)
-- Expo (React Native wrapper)
-- TWA (Trusted Web Activities for Android)
+* Tabs: “File”, “Edit”, “Insert”, “Chat”, “Image”, etc.
+* Tabs are **loaded dynamically** based on backend service availability.
 
-------------------------------------------------------------
-📦 PLANNED FEATURES (MODULAR)
-------------------------------------------------------------
+✅ **Role-Based Layout**
 
-Each service is accessed via its path (e.g., /chat, /image) and handled dynamically in UI.
+* Tourist, Guide, Artisan, Admin see different dashboards after login.
 
-If a service is down, UI will show:
-- Static page
-- "Coming Soon" label
-- Placeholder images
+✅ **Fallback UI**
 
-All tabs remain in UI regardless of availability.
+* If a service like `/chat` is unavailable, its page shows:
 
-You may maintain a registry file `services.txt` like:
+  * "Coming Soon"
+  * Default logo + placeholder content
 
-[AVAILABLE SERVICES]
+✅ **Environment-Driven Routing**
+
+* All backend URLs are derived from `.env`
+* Services never hardcoded.
+
+✅ **Modern UI Support**
+
+* Animations, transitions, page motions
+* Responsive grid layout
+* Mobile-first design
+
+✅ **Ready for Integration**
+
+* API calls handled via centralized service layer
+* Only change needed: switch `.env` for production or Kubernetes
+
+---
+
+## 📁 SERVICE TRACKING
+
+Maintain a `services.txt` file (or dynamic API call) to track available services:
+
+Example:
+
+```
+[ENABLED]
 /chat
 /image
 /message
 
-[COMING SOON]
-/tools
-/booking
+[COMING_SOON]
 /ai-guide
+/booking
+```
 
-------------------------------------------------------------
-🧠 KEY MODULES (SIMPLE DESCRIPTION)
-------------------------------------------------------------
+The frontend uses this to:
 
-Tourist:
-- Discover attractions
-- Book tours/workshops
-- Buy artisan products
+* Render the correct tabs
+* Show "Available Now" or "Coming Soon" views
 
-Guide:
-- Manage own tours
-- Set calendar + prices
-- Communicate with tourists
+---
 
-Artisan:
-- Sell products
-- Schedule workshops
-- Upload content
+## 📲 DEPLOYMENT OPTIONS
 
-Admin:
-- Moderate content
-- Analyze traffic + reports
-- Manage campaigns
+Once frontend is ready:
 
-------------------------------------------------------------
-💡 DEVELOPMENT TIPS
-------------------------------------------------------------
+* Build: `npm run build`
+* Wrap for mobile using:
 
-- Do NOT hardcode service URLs — use `.env` and dynamic routing.
-- Always design UI with fallback states.
-- Every page/component should respect the actor's role.
-- Maintain services modularly: they are replaceable containers.
-- Use placeholder components to keep UI functional even when backend is not ready.
+  * **Capacitor** → Android, iOS, Huawei
+  * **Expo WebView** → React Native Wrapper
+  * **TWA** → Android Chrome Web Store
 
-------------------------------------------------------------
-👥 TEAM ROLES
-------------------------------------------------------------
+---
 
-- Frontend Developers – focus on UI, Role Navigation, Dynamic Tabs, PWA
-- Backend Developers – handle auth, routing, service proxying
-- AI Developers – build assistant tools, tagging, recommendations
-- Mobile Engineers – export builds using Capacitor or Expo
-- DevOps – manage Docker, Kubernetes, deployment pipelines
+## 💡 DEVELOPER GUIDELINES
 
-------------------------------------------------------------
-📘 FINAL NOTE
-------------------------------------------------------------
+* Always use `.env` for all URLs.
+* Don’t remove tabs — show fallback if service is not yet available.
+* Respect roles in routing and UI.
+* Create one layout system for all actors.
+* Build once — never modify per service.
 
-This project is still under active development. The frontend is designed as a stable base that will not require structural changes when backend services are connected or replaced.
+---
 
-Always use:
-- Professional naming conventions
-- Role-safe routing
-- Environment-based configuration
+## ✅ NEXT STEPS AFTER FRONTEND SETUP
 
-> Contact the lead maintainer for questions or onboarding new team members.
+1. Implement **Login / Signup** page.
+2. Implement **Role-Based Routing**.
+3. Create App Layout & Dynamic Menu.
+4. Design service pages (`/chat`, `/image`, …).
+5. Add fallback logic if a service is missing.
+6. Connect with backend when ready.
