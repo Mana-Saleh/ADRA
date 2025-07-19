@@ -1,132 +1,185 @@
-# SMART TOURISM GUIDE – MODULAR FEATURE DESIGN (ADRA-Based Architecture)
+SMART TOURISM GUIDE - FULLSTACK PLATFORM
+========================================
 
-📌 OVERVIEW
-The Smart Tourism Guide is a modern, AI-enhanced ecosystem built on a service-oriented architecture (SOA). Each core function (chat, booking, content, shop, etc.) is packaged as a containerized microservice, dynamically integrated via the ADRA holder frontend and connected through a unified backend API.
+An intelligent AI-powered tourism platform designed for Tourists, Guides, Artisans, and Admins. The system is structured for scalability, modularity, and mobile readiness across all operating systems including Android, iOS, Huawei, and the Web.
 
----
+------------------------------------------------------------
+🌐 PROJECT STRUCTURE
+------------------------------------------------------------
 
-## 🔧 SYSTEM ARCHITECTURE
+ADRA/
+│
+├── frontend/         # React + Vite + Tailwind UI (PWA Ready)
+│   ├── .env          # VITE_API_BASE for backend
+│   └── src/
+│       ├── auth/     # Login, Signup, JWT, Role Routing
+│       ├── pages/    # Feature pages (Chat, Image, Tools, etc.)
+│       ├── layout/   # Layouts per role
+│       ├── api/      # Fetch wrappers and interceptors
+│       └── hooks/    # Auth / Tab manager / UI logic
 
-✅ Modular Microservices  
-✅ Frontend Holder UI (React + Tailwind + Vite)  
-✅ Unified Backend API Layer (Node.js)  
-✅ Dynamic Service Detection (via `.env` or backend registry)  
-✅ Cross-platform Ready (Web / Android / iOS / Huawei via Capacitor or Expo)  
-✅ Fallback UI for missing services (“Coming Soon”)
+├── backend/          # Central API Gateway
+│   ├── routes/       # login, signup, verify
+│   ├── controllers/  # role logic + JWT
+│   ├── middlewares/  # auth guard, error handling
+│   └── utils/        # helper functions
 
----
+└── services/         # Independent Microservices (optional containers)
+    ├── chat-service/
+    ├── image-service/
+    ├── message-service/
+    └── booking-service/
 
-## 👤 ACTORS
+------------------------------------------------------------
+🔐 AUTHENTICATION DESIGN
+------------------------------------------------------------
 
-1. 🧭 Tourist – Browses, books, interacts, and uses AI tools  
-2. 👨‍🏫 Guide – Offers tours and manages content  
-3. 🧵 Artisan – Sells products and creates workshops  
-4. 🏡 Site Owner – Manages private experiences and availability  
-5. 🤖 AI Agent – Handles translation, recommendations, and auto-replies  
-6. 🛡️ Admin – Oversees users, content, system security
+- One backend service handles all login/signup.
+- Role-based access is determined after login.
+- JWT token is returned and stored in `localStorage`.
+- Each frontend page or route checks token + role.
+- New actors (Guide, Artisan, Admin) redirect to their dashboards after login.
+- Services themselves don’t handle auth logic.
 
----
+------------------------------------------------------------
+🚀 INSTALLATION AND INITIALIZATION
+------------------------------------------------------------
 
-## 🧱 MASTER FEATURE MODULES (Per-Service Format)
+1. Clone Project
+----------------
+git clone https://github.com/your-org/adra-tourism-platform.git
+cd adra-tourism-platform
 
-### 🔁 CORE INFRASTRUCTURE
+2. FRONTEND SETUP
+-----------------
+cd frontend
 
-| Feature                        | Service             | Type         |
-|-------------------------------|---------------------|--------------|
-| API Gateway                   | `api-gateway`       | Backend      |
-| Authentication & Roles        | `auth-service`      | Service      |
-| Role Management               | `user-service`      | Service      |
+npm create vite@latest -- --template react-ts
+npm install vite@4.4.9 --save-dev
+npm install
+npm install -D tailwindcss@3.4.1 postcss autoprefixer
+npx tailwindcss init -p
 
----
+# Configure tailwind.config.js and index.css properly
 
-### 🧳 TOURIST EXPERIENCE
+.env file (example):
+--------------------
+VITE_API_BASE=http://localhost:4000
 
-| Feature                        | Service                 | Status  |
-|-------------------------------|--------------------------|---------|
-| AI-Powered Recommendations     | `recommendation-ai`      | ⏳ Planned |
-| GPS-Based Nearby Attractions   | `gps-discovery`          | ⏳ Planned |
-| Unified Cart (Tours + Shop)    | `cart-service`           | ⏳ Planned |
-| Real-Time Availability         | `booking-service`        | ⏳ Planned |
-| "Ask a Local" Chat             | `chat-assistant`         | ✅ Ready |
-| AI-Translated Comments         | `translation-service`    | ⏳ Planned |
+3. BACKEND SETUP
+----------------
+cd ../backend
+npm install
 
----
+.env file (example):
+--------------------
+PORT=4000
+JWT_SECRET=yourSecretKey
 
-### 🧭 GUIDE MODULE
+npm run dev
 
-| Feature                        | Service              | Status  |
-|-------------------------------|-----------------------|---------|
-| Tour Management Tools         | `guide-dashboard`     | ⏳ Planned |
-| Dynamic Pricing               | `pricing-engine`      | ⏳ Planned |
-| Availability Calendar         | `calendar-service`    | ⏳ Planned |
-| Analytics & Ratings           | `analytics-service`   | ⏳ Planned |
+4. START LOCAL DEVELOPMENT
+---------------------------
+# Terminal 1: Start backend
+cd backend && npm run dev
 
----
+# Terminal 2: Start frontend
+cd frontend && npm run dev
 
-### 🛍️ ARTISAN MODULE
+------------------------------------------------------------
+📱 MOBILE / APP STORE DEPLOYMENT
+------------------------------------------------------------
 
-| Feature                        | Service              | Status  |
-|-------------------------------|-----------------------|---------|
-| Product Upload Wizard         | `artisan-portal`      | ⏳ Planned |
-| Workshop Scheduler            | `calendar-service`    | ✅ Ready |
-| AI Product Tagging            | `tagging-ai`          | ⏳ Planned |
-| Inventory Tracker             | `inventory-service`   | ⏳ Planned |
+The frontend is PWA-ready and can also be exported using Capacitor or React Native WebView.
 
----
+✅ Android (Google Play)
+✅ iOS (App Store)
+✅ Huawei (AppGallery)
+✅ Web Browser (PWA)
 
-### 🛠️ ADMIN MODULE
+Use `npm run build` in frontend and wrap with:
+- Capacitor (Recommended)
+- Expo (React Native wrapper)
+- TWA (Trusted Web Activities for Android)
 
-| Feature                        | Service              | Status  |
-|-------------------------------|-----------------------|---------|
-| User Verification             | `admin-panel`         | ✅ Ready |
-| Content Moderation            | `moderation-service`  | ⏳ Planned |
-| Real-Time Alerts              | `alert-service`       | ⏳ Planned |
-| Revenue Dashboard             | `analytics-service`   | ⏳ Planned |
+------------------------------------------------------------
+📦 PLANNED FEATURES (MODULAR)
+------------------------------------------------------------
 
----
+Each service is accessed via its path (e.g., /chat, /image) and handled dynamically in UI.
 
-### 🧠 AI MODULES
+If a service is down, UI will show:
+- Static page
+- "Coming Soon" label
+- Placeholder images
 
-| Feature                        | Service              | Status  |
-|-------------------------------|-----------------------|---------|
-| Text & Voice Chat Assistant   | `chat-assistant`      | ✅ Ready |
-| Image Recognition             | `vision-ai`           | ⏳ Planned |
-| Itinerary Generator           | `itinerary-ai`        | ⏳ Planned |
-| Real-Time Translation         | `translation-service` | ⏳ Planned |
-| Demand Forecasting            | `forecast-engine`     | ⏳ Planned |
+All tabs remain in UI regardless of availability.
 
----
+You may maintain a registry file `services.txt` like:
 
-### 📦 TECHNICAL / PLATFORM
+[AVAILABLE SERVICES]
+/chat
+/image
+/message
 
-| Feature                        | Description                              |
-|-------------------------------|------------------------------------------|
-| Offline Mode                  | Progressive Web App (PWA) integration    |
-| GPS & Camera                  | Capacitor / Native API support           |
-| App Store Publishing          | Compatible with Android, iOS, Huawei     |
-| Payment Security              | Stripe + Tokenization                    |
-| Load Balancing                | Kubernetes + NodePort + Gateway          |
-| Rate Limiting + Logs          | API Gateway layer                        |
+[COMING SOON]
+/tools
+/booking
+/ai-guide
 
----
+------------------------------------------------------------
+🧠 KEY MODULES (SIMPLE DESCRIPTION)
+------------------------------------------------------------
 
-## 🔗 INTEGRATION STRATEGY
+Tourist:
+- Discover attractions
+- Book tours/workshops
+- Buy artisan products
 
-- Each service defines its API routes (e.g. `/chat`, `/image`, `/booking`)
-- Frontend reads service registry or `.env` to check available services
-- If a service is missing → fallback UI with “Coming Soon”
-- Services communicate through backend proxy → no CORS issue
-- Cross-service chat unified through central `chat-engine` or `message-service`
-- All services run containerized and independently
+Guide:
+- Manage own tours
+- Set calendar + prices
+- Communicate with tourists
 
----
+Artisan:
+- Sell products
+- Schedule workshops
+- Upload content
 
-## 🧩 VALUE PROPOSITION
+Admin:
+- Moderate content
+- Analyze traffic + reports
+- Manage campaigns
 
-- 🧳 **Tourists**: Plan trips smartly with on-demand help  
-- 👨‍🏫 **Guides/Artisans**: Sell, publish, and get exposure directly  
-- 🏡 **Private Owners**: Host unique experiences easily  
-- 🤝 **Industry**: Digitize tourism & unlock local economic value
+------------------------------------------------------------
+💡 DEVELOPMENT TIPS
+------------------------------------------------------------
 
----
+- Do NOT hardcode service URLs — use `.env` and dynamic routing.
+- Always design UI with fallback states.
+- Every page/component should respect the actor's role.
+- Maintain services modularly: they are replaceable containers.
+- Use placeholder components to keep UI functional even when backend is not ready.
 
+------------------------------------------------------------
+👥 TEAM ROLES
+------------------------------------------------------------
+
+- Frontend Developers – focus on UI, Role Navigation, Dynamic Tabs, PWA
+- Backend Developers – handle auth, routing, service proxying
+- AI Developers – build assistant tools, tagging, recommendations
+- Mobile Engineers – export builds using Capacitor or Expo
+- DevOps – manage Docker, Kubernetes, deployment pipelines
+
+------------------------------------------------------------
+📘 FINAL NOTE
+------------------------------------------------------------
+
+This project is still under active development. The frontend is designed as a stable base that will not require structural changes when backend services are connected or replaced.
+
+Always use:
+- Professional naming conventions
+- Role-safe routing
+- Environment-based configuration
+
+> Contact the lead maintainer for questions or onboarding new team members.
