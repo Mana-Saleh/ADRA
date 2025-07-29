@@ -1,69 +1,93 @@
-# React + TypeScript + Vite
+# 📱 ADRA Prototype
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**A Frontend Mockup for the Smart Cultural Tourism Platform**
 
-Currently, two official plugins are available:
+This directory contains the working prototype for the ADRA platform's user interface, designed to simulate the user experience and layout of the production system. This is a **frontend-only** preview and is **not connected** to live services or backend APIs.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Purpose
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+The prototype was created to:
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+* Visualize the design and UX of the final app
+* Test navigation and layout across key sections
+* Validate multi-role support (Tourist, Guide, Artisan, Admin)
+* Showcase service pages before backend integration
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📁 Directory Overview
+
+```bash
+Prototype/src/
+├── pages/               # Page views (auth, home, profile, services, etc.)
+├── components/          # Shared layout elements like navigation bar
+├── layouts/             # Application-wide layout wrapper
+├── assets/              # Static media (images, videos for preview)
+├── locales/             # Translation files (ar / en)
+├── config/              # Role configuration
+├── context/             # Theme & context providers
+├── hooks/               # Custom React hooks (role-based filters)
+├── routes/              # App routing logic
+├── services/            # Mocked API services (auth only)
+├── store/               # Global state (auth store)
+├── i18n.ts              # i18n config
+└── main.tsx             # App entry point
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🧩 Key Pages Implemented
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+* `/` – Welcome / Home page with hero, features, and trending content
+* `/auth/login` – Login screen with role switcher
+* `/auth/signup` – Signup screen
+* `/profile` – User profile (dynamic role-aware)
+* `/services/smart-guide` – AI-powered tour planner mockup
+* `/services/book-experience` – Local experience booking
+* `/services/discover-nearby` – Location-based discovery
+* `/services/live-translate` – Translation UI sample
+* `/services/preserve-culture` – Cultural preservation samples
+* `/services/marketplace` – Future e-commerce landing
+* `/services/events-activities` – Event listing (demo only)
+* `/services/my-bookings` – Booking history
+* `/services/local-streams` – Live content streams
+* `/shorts` – Interactive tourism shorts mock
+
+---
+
+## 🌐 Internationalization
+
+* Fully structured for Arabic & English (`/locales/ar`, `/locales/en`)
+* `i18n.ts` manages translation loading & switching
+* RTL layout supported dynamically
+
+---
+
+## 🎨 Technologies
+
+| Stack         | Description                      |
+| ------------- | -------------------------------- |
+| React + Vite  | Lightweight React frontend setup |
+| Tailwind CSS  | Utility-first modern styling     |
+| Framer Motion | Animations & transitions         |
+| React Icons   | Icon library                     |
+| TypeScript    | Type safety for components       |
+
+---
+
+## ⚠️ Limitations
+
+* This prototype does **not include any backend connection**
+* All service pages are static or mocked
+* Booking / Chat / Translation pages are for UX testing only
+
+---
+
+## 📜 License
+
+This prototype is the intellectual property of the **ADRA Team**.
+All rights reserved. For internal hackathon use and presentation purposes only.
+
+---
