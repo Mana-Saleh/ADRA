@@ -11,23 +11,24 @@
   <p><strong>The Future of Smart Cultural Tourism in Asir</strong></p>
 
   <!-- Badges -->
-  <div>
-    <!-- Link to Hackathon website -->
+  <p align="center">
+  
+    <!-- Link to Asir Tabtaker project -->
     <a href="https://aseertabtaker.asda.gov.sa/#hero-section" target="_blank">
-      <img src="https://img.shields.io/badge/Asir%20Hackathon-Official%20Project-2563eb?style=for-the-badge" />
+      <img src="https://img.shields.io/badge/Asir%20Hackathon-Official%20Project-2563eb?style=for-the-badge" alt="Asir Hackathon" />
     </a>
   
-    <!-- Link to internal section: Status -->
+    <!-- Link to internal status section -->
     <a href="#-current-status">
-      <img src="https://img.shields.io/badge/Status-In%20Development-blue?style=for-the-badge" />
+      <img src="https://img.shields.io/badge/Status-In%20Development-blue?style=for-the-badge" alt="Project Status" />
     </a>
   
     <!-- Link to LICENSE file -->
     <a href="LICENSE" target="_blank">
-      <img src="https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge" />
+      <img src="https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge" alt="License" />
     </a>
-  </div>
-
+  
+  </p>
 
   <p>A next-generation AI-powered tourism ecosystem connecting travelers, guides, and artisans across Asir.</p>
 
