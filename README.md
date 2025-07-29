@@ -62,7 +62,7 @@ From intelligent multilingual guides to a direct marketplace for artisans, ADRA 
 ADRA follows a **scalable microservices architecture**, designed for cloud deployment and future extensibility.
 
 <div align="center">
-  <img src="images/adra-architecture.jpeg" alt="ADRA System Architecture Diagram" width="90%" style="border-radius: 12px; margin: 20px 0; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);" />
+  <img src="images/diagram.png" alt="ADRA System Architecture Diagram" width="90%" style="border-radius: 12px; margin: 20px 0; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);" />
   <p><em>API Gateway orchestrates secure communication between frontend, microservices, and AI engines.</em></p>
 </div>
 
