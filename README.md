@@ -75,6 +75,7 @@ From intelligent multilingual guides to a direct marketplace for artisans, ADRA 
 | 🧳 **Tourist** | Explore Asir intelligently — book tours, translate on the go, shop local. |
 | 🧕 **Local Guide** | Monetize knowledge with flexible tour scheduling and AI co-piloting. |
 | 🧑‍🎨 **Artisan** | Sell crafts directly, tell cultural stories, grow a digital presence. |
+| 🧱 **Site Owner** | Promote heritage locations, manage visits, and collaborate with guides. |
 | 🤖 **AI Agent (DARA)** | 24/7 assistant: translates, plans, explains, and connects. |
 | 👤 **Admin** | Oversee platform health, content, safety, and analytics. |
 
