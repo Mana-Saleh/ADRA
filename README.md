@@ -12,7 +12,9 @@
 
   <!-- Badges -->
   <div>
-    <img src="https://img.shields.io/badge/Asir%20Hackathon-Official%20Project-2563eb?style=for-the-badge" />
+    <a href="https://aseertabtaker.asda.gov.sa/#hero-section" target="_blank">
+      <img src="https://img.shields.io/badge/Asir%20Hackathon-Official%20Project-2563eb?style=for-the-badge" />
+    </a>
     <img src="https://img.shields.io/badge/Status-In%20Development-blue?style=for-the-badge" />
     <img src="https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge" />
   </div>
@@ -152,14 +154,8 @@ ADRA is open to collaborators in:
 
 ## 📜 License
 
-```
-All rights reserved.
-
-This project is the intellectual property of the ADRA Team.
-No part of this repository may be copied, distributed, or used without express written permission from the authors.
-
-© 2025 Mana Saleh and Team. All rights reserved.
-```
+This project is licensed under a custom **All Rights Reserved** license.  
+See [LICENSE](./LICENSE) for full legal terms.
 
 ---
 
