@@ -125,13 +125,16 @@ ADRA/
 
 ## 🚧 Current Status
 
-| Phase | Status |
-|------|--------|
-| ✅ Core Architecture | Complete |
-| 🔧 Microservices Integration | In Progress (70%) |
-| 🤖 AI Agent Training | Ongoing (Arabic + Tourism Corpus) |
-| 🛒 Marketplace MVP | Under Testing |
-| 🎯 Pilot Launch | Q3 2025 (Al-Baha & Abha) |
+| Component        | Status                 |
+|------------------|------------------------|
+| ✅ Prototype      | Complete               |
+| 🔧 Backend        | In Progress (60%)      |
+| 🔧 Services       | In Progress (50%)      |
+| 📄 Documents      | In Progress (80%)      |
+| 🎨 Frontend       | In Progress (70%)      |
+| 🧠 AI Agent       | Planned                |
+| 🛒 Marketplace MVP| Under Testing          |
+| 🚀 Pilot Launch | Planned for Q3 2025 (Asir Region) |
 
 ---
 
