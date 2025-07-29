@@ -10,7 +10,6 @@
 
   <p><strong>The Future of Smart Cultural Tourism in Asir</strong></p>
 
-  <!-- Badges -->
   <p align="center">
   
     <!-- Link to Asir Tabtaker project -->
