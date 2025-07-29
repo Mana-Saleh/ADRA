@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-size: 16px;
+  @apply antialiased;
+}
+body {
+  @apply bg-gray-50 text-gray-900 min-h-screen;
+  touch-action: manipulation;
+}
+
+/* Add these transitions for smoother effects */
+.nav-button {
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-button-active {
+  transform: translateY(-2px);
+}
