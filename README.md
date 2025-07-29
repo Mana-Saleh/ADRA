@@ -1,29 +1,44 @@
 <div align="center">
 
-  <!-- Logo and Title -->
-  <p align="center">
-    <img src="images/adra.logo.jpg" alt="ADRA Logo" width="180" />
-  </p>
+ <!-- Logo and Title -->
+<p align="center">
+  <img src="images/adra.logo.jpg" alt="ADRA Logo" width="180" />
+</p>
+
+<h1 align="center">
+  <span style="background: linear-gradient(90deg, #2563eb, #059669); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+    ADRA
+  </span>
+</h1>
+
+<p align="center"><strong>The Future of Smart Cultural Tourism in Asir</strong></p>
+
+<!-- Badges -->
+<p align="center">
+  <a href="https://aseertabtaker.asda.gov.sa/" target="_blank">
+    <img src="https://img.shields.io/badge/Asir%20Hackathon-Official%20Project-2563eb?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIj48cGF0aCBkPSJNMTIgMkM2LjQ4IDggNCAxMi40OCA0IDE4aDE2YzAtNS41Mi0yLjQ4LTEwLTgtMTZ6bTAgMTQuNWMtMi43NiAwLTUtMi4yNC01LTVzMi4yNC01IDUtNSA1IDIuMjQgNSA1LTIuMjQgNS01IDV6Ii8+PC9zdmc+" alt="Asir Hackathon" />
+  </a>
+
+  <a href="#-current-status">
+    <img src="https://img.shields.io/badge/Status-In%20Development-blue?style=for-the-badge" alt="Project Status" />
+  </a>
+
+  <a href="LICENSE" target="_blank">
+    <img src="https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge" alt="License" />
+  </a>
   
-  <h1 align="center">ADRA</h1>
+  <a href="https://reactjs.org/" target="_blank">
+    <img src="https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="React 18" />
+  </a>
   
-  <p align="center"><strong>The Future of Smart Cultural Tourism in Asir</strong></p>
+  <a href="https://nodejs.org/" target="_blank">
+    <img src="https://img.shields.io/badge/Node.js-TypeScript-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js with TypeScript" />
+  </a>
   
-  <!-- Badges -->
-  <p align="center">
-  
-    <!-- External Hackathon badge using HTML -->
-    <a href="https://aseertabtaker.asda.gov.sa/#hero-section" target="_blank">
-      <img src="https://img.shields.io/badge/Asir%20Hackathon-Official%20Project-2563eb?style=for-the-badge" alt="Asir Hackathon" />
-    </a>
-  
-    <!-- Internal Status badge using Markdown -->
-    [![Project Status](https://img.shields.io/badge/Status-In%20Development-blue?style=for-the-badge)](#-current-status)
-  
-    <!-- LICENSE badge using Markdown -->
-    [![License](https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge)](LICENSE)
-  
-  </p>
+  <a href="https://www.typescriptlang.org/" target="_blank">
+    <img src="https://img.shields.io/badge/TypeScript-4.9-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  </a>
+</p>
 
   <p>A next-generation AI-powered tourism ecosystem connecting travelers, guides, and artisans across Asir.</p>
 
