@@ -1,33 +1,33 @@
 <div align="center">
 
-  <!-- Logo -->
-  <img src="images/adra.logo.jpg" alt="ADRA Logo" width="180" />
-
-  <!-- Title -->
-  <h1 style="background: linear-gradient(90deg, #2563eb, #059669); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-    ADRA
-  </h1>
-
-  <p><strong>The Future of Smart Cultural Tourism in Asir</strong></p>
-
+  <!-- Logo and Title -->
   <p align="center">
+    <img src="images/adra.logo.jpg" alt="ADRA Logo" width="180" />
+  </p>
   
-    <!-- Link to Asir Tabtaker project -->
+  <h1 align="center">
+    <span style="background: linear-gradient(90deg, #2563eb, #059669); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+      ADRA
+    </span>
+  </h1>
+  
+  <p align="center"><strong>The Future of Smart Cultural Tourism in Asir</strong></p>
+  
+  <!-- Badges -->
+  <p align="center">
     <a href="https://aseertabtaker.asda.gov.sa/#hero-section" target="_blank">
       <img src="https://img.shields.io/badge/Asir%20Hackathon-Official%20Project-2563eb?style=for-the-badge" alt="Asir Hackathon" />
     </a>
   
-    <!-- Link to internal status section -->
     <a href="#-current-status">
       <img src="https://img.shields.io/badge/Status-In%20Development-blue?style=for-the-badge" alt="Project Status" />
     </a>
   
-    <!-- Link to LICENSE file -->
     <a href="LICENSE" target="_blank">
       <img src="https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge" alt="License" />
     </a>
-  
   </p>
+
 
   <p>A next-generation AI-powered tourism ecosystem connecting travelers, guides, and artisans across Asir.</p>
 
