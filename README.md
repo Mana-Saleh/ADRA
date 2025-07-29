@@ -5,29 +5,25 @@
     <img src="images/adra.logo.jpg" alt="ADRA Logo" width="180" />
   </p>
   
-  <h1 align="center">
-    <span style="background: linear-gradient(90deg, #2563eb, #059669); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-      ADRA
-    </span>
-  </h1>
+  <h1 align="center">ADRA</h1>
   
   <p align="center"><strong>The Future of Smart Cultural Tourism in Asir</strong></p>
   
   <!-- Badges -->
   <p align="center">
+  
+    <!-- External Hackathon badge using HTML -->
     <a href="https://aseertabtaker.asda.gov.sa/#hero-section" target="_blank">
       <img src="https://img.shields.io/badge/Asir%20Hackathon-Official%20Project-2563eb?style=for-the-badge" alt="Asir Hackathon" />
     </a>
   
-    <a href="#-current-status">
-      <img src="https://img.shields.io/badge/Status-In%20Development-blue?style=for-the-badge" alt="Project Status" />
-    </a>
+    <!-- Internal Status badge using Markdown -->
+    [![Project Status](https://img.shields.io/badge/Status-In%20Development-blue?style=for-the-badge)](#-current-status)
   
-    <a href="LICENSE" target="_blank">
-      <img src="https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge" alt="License" />
-    </a>
+    <!-- LICENSE badge using Markdown -->
+    [![License](https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge)](LICENSE)
+  
   </p>
-
 
   <p>A next-generation AI-powered tourism ecosystem connecting travelers, guides, and artisans across Asir.</p>
 
