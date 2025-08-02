@@ -1,10 +1,15 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import AppRoutes from "./routes";
-import "./index.css";
-import './i18n'; 
-ReactDOM.createRoot(document.getElementById("root")!).render(
+// src/main.tsx
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App.tsx';
+import './index.css';
+import { BrowserRouter } from 'react-router-dom';
+import './i18n'; // Add this line
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <AppRoutes />
-  </React.StrictMode>
+    <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>,
 );

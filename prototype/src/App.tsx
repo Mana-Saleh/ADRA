@@ -1,24 +1,38 @@
-import { motion } from "framer-motion";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import AppRoutes from "./routes";
+// src/App.tsx
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from './context/ThemeContext';
+import ErrorBoundary from './components/common/ErrorBoundary';
+import MainLayout from './layouts/MainLayout';
+import Home from './pages/Home';
+import Favorites from './pages/Favorites';
+import Profile from './pages/Profile';
+import Shorts from './pages/Shorts';
+import Bookings from './pages/Bookings';
+import { useTranslation } from 'react-i18next';
 
-export default function App() {
+const App: React.FC = () => {
+  const { i18n } = useTranslation();
+  const isArabic = i18n.language === 'ar';
+
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      className="min-h-screen bg-gray-50 text-gray-900"
-    >
-      <AppRoutes />
-
-      <ToastContainer
-        position="bottom-center"
-        toastClassName="bg-white text-gray-900 rounded shadow-md"
-        bodyClassName="text-sm"
-        autoClose={3000}
-        hideProgressBar
-      />
-    </motion.div>
+    <ErrorBoundary>
+      <ThemeProvider>
+        <div dir={isArabic ? 'rtl' : 'ltr'} lang={i18n.language}>
+          <Routes>
+            <Route path="/" element={<MainLayout />}>
+              <Route index element={<Home />} />
+              <Route path="discover" element={<Home />} />
+              <Route path="wishlist" element={<Favorites />} />
+              <Route path="profile" element={<Profile />} />
+              <Route path="shorts" element={<Shorts />} />
+              <Route path="bookings" element={<Bookings />} />
+            </Route>
+          </Routes>
+        </div>
+      </ThemeProvider>
+    </ErrorBoundary>
   );
-}
+};
+
+export default App;

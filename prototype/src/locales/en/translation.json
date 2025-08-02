@@ -1,37 +1,730 @@
 {
-  "discover_local_experiences": "Discover Local Experiences",
-  "connect_with_authentic_culture": "Connect with authentic culture",
-  "explore_now": "Explore Now",
-  "our_services": "Our Services",
-  "view_all": "View All",
-  "smart_guide": "Smart Guide",
-  "smart_guide_desc": "Get help from AI or human guides",
-  "discover_nearby": "Discover Nearby",
-  "discover_nearby_desc": "Explore attractions, food & more",
-  "marketplace": "Marketplace",
-  "marketplace_desc": "Explore artisan & local products",
-  "events_activities": "Events & Activities",
-  "events_activities_desc": "Tours, workshops & adventures",
-  "my_bookings": "My Bookings",
-  "my_bookings_desc": "View & manage your activities",
-  "live_translate": "Live Translate",
-  "live_translate_desc": "Real-time local chat & translation",
-  "local_streams": "Local Streams",
-  "local_streams_desc": "Join livestreamed local events",
-  "preserve_culture": "Preserve Culture",
-  "preserve_culture_desc": "Digital artifact restoration",
-  "your_wallet": "Your Wallet",
-  "manage_credits": "Manage your credits",
-  "balance": "Balance",
-  "add_funds": "Add Funds",
-  "nearby_hotspots": "Nearby Hotspots",
-  "see_all": "See all",
-  "trending_videos": "Trending Videos",
-  "todays_special": "Today's Special",
-  "offer_title": "30% Off Handmade Gifts",
-  "offer_sub": "Al-Amal Crafts",
-  "claim_offer": "Claim Offer",
-  "offer_expires": "Ends today",
-  "book_experience": "Book Experience",
-  "book_experience_desc": "Authentic Asir Cultural Experiences"
+  "categories": {
+    "for_you": "For You",
+    "culture": "Culture",
+    "food": "Food",
+    "nature": "Nature",
+    "events": "Events",
+    "crafts": "Crafts",
+    "ask_local": "Ask Local",
+    "heritage": "Heritage"
+  },
+  "home": {
+    "hero_title": "Be among the first to explore the future of heritage tourism in Saudi Arabia",
+    "cultural_experiences": "Unforgettable cultural experiences",
+    "top_sights": "Top cultural sights you can't miss",
+    "around_the_world": "Awe-inspiring culture around the world"
+  },
+  "hero": {
+    "explore_asir": "Beta Launch",
+    "learn_more": "Learn more"
+  },
+  "navbar": {
+    "search_placeholder": "Search experiences...",
+    "language_en": "EN",
+    "language_ar": "AR",
+    "brand": "ADRA"
+  },
+  "tabs": {
+    "discover": "Discover",
+    "shorts": "Shorts",
+    "bookings": "Bookings",
+    "wishlist": "Wishlist",
+    "profile": "Profile"
+  },
+  "forYou": {
+    "title": "Just for You",
+    "description": "Curated experiences based on your interests",
+    "recommended": "Recommended for You",
+    "popularNearYou": "Popular Near You",
+    "trending": "Trending Experiences",
+    "thisSeason": "This Season",
+    "recentlyViewed": "Recently Viewed"
+  },
+  "culture": {
+    "title": "Discover the Rich Culture",
+    "description": "Explore the heritage, traditions, and vibrant life of the region.",
+    "tabs": {
+      "culture": "Culture",
+      "guides": "Local Guides",
+      "chat": "Chat with Guide",
+      "ai": "AI Assistant",
+      "travelPlan": "Smart Travel Plan"
+    },
+    "unforgettableExperiences": "Unforgettable Experiences",
+    "topCulturalSights": "Top Cultural Sights",
+    "museumsAndArt": "Museums & Art",
+    "guides": {
+      "specialty1": "Historical Architecture",
+      "specialty2": "Traditional Crafts",
+      "specialty3": "Local Cuisine",
+      "specialty4": "Desert Culture",
+      "viewProfile": "View Profile",
+      "bookNow": "Book Now",
+      "perHour": "hr"
+    },
+    "chat": {
+      "welcome": "Hello! I'm Ahmed, your local guide. How can I assist you today?",
+      "question": "Hi Ahmed, can you tell me more about the heritage village tour?",
+      "response": "Of course! The heritage village tour offers a deep dive into traditional life. You'll see old houses, workshops, and experience local crafts firsthand.",
+      "online": "Online",
+      "placeholder": "Type your message...",
+      "guideAltText": "Guide Avatar",
+      "yourAltText": "Your Avatar",
+      "callGuide": "Call Guide",
+      "sendMessage": "Send Message"
+    },
+    "ai": {
+      "title": "Ask Our AI Assistant",
+      "description": "Get instant answers and recommendations for your cultural journey.",
+      "placeholder": "Ask anything about culture, guides, or places...",
+      "ask": "Ask",
+      "suggestion1": "Best Cultural Sites",
+      "suggestion1Desc": "Discover the top-rated historical and cultural attractions.",
+      "suggestion2": "Find Local Guides",
+      "suggestion2Desc": "Connect with experienced guides specializing in your interests.",
+      "suggestion3": "Plan Your Visit",
+      "suggestion3Desc": "Get tips on timing, tickets, and must-see spots."
+    }
+  },
+  "food": {
+    "title": "Food Experiences",
+    "description": "Taste authentic local cuisine and traditional flavors in genuine settings",
+    "authenticExperiences": "Authentic Food Experiences",
+    "cookingClasses": "Cooking Classes",
+    "foodMarketTours": "Food & Market Tours",
+    "farmToTable": "Farm-to-Table Visits",
+    "localFoodMakers": "Local Food Makers"
+  },
+  "nature": {
+    "title": "Nature Experiences",
+    "description": "Explore the natural beauty and outdoor adventures of our region",
+    "natureAdventures": "Nature Experiences & Outdoor Adventures",
+    "ruralStays": "Rural Stays & Farm Life",
+    "outdoorGatherings": "Local Outdoor Gatherings"
+  },
+  "crafts": {
+    "title": "Asir Traditional Crafts",
+    "description": "Discover authentic handmade crafts from the Asir region",
+    "tabs": {
+      "explore": "Explore Crafts",
+      "stores": "Craft Stores",
+      "cart": "Shopping Cart",
+      "heritage": "Heritage"
+    },
+    "storesTitle": "Asir Craft Stores",
+    "storesDesc": "Browse authentic crafts from verified and local stores",
+    "cartTitle": "Your Shopping Cart",
+    "cartDesc": "Review your selected crafts before checkout",
+    "certified": "Certified by ADRA",
+    "certifiedShort": "ADRA Certified",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "free": "Free",
+    "total": "Total",
+    "checkout": "Proceed to Checkout",
+    "emptyCart": "Your cart is empty",
+    "addItems": "Add some beautiful crafts to your cart",
+    "categories": {
+      "textiles": "Textiles",
+      "pottery": "Pottery",
+      "baskets": "Baskets",
+      "jewelry": "Jewelry",
+      "woodwork": "Woodwork",
+      "houseware": "Houseware",
+      "crafts": "Crafts"
+    },
+    "handsOnWorkshops": "Hands-on Workshops",
+    "meetArtisans": "Meet Artisans",
+    "craftMarkets": "Craft Markets",
+    "heritageRevival": "Heritage Revival",
+    "store": {
+      "saduRug": "Handwoven Sadu Rug",
+      "saduRugDesc": "Traditional geometric pattern rug from Abha",
+      "potterySet": "Asir Pottery Set",
+      "potterySetDesc": "Handcrafted ceramic set with traditional motifs",
+      "palmBasket": "Palm Leaf Basket",
+      "palmBasketDesc": "Woven basket from locally sourced palm leaves",
+      "silverJewelry": "Silver Traditional Jewelry",
+      "silverJewelryDesc": "Handcrafted silver pieces with tribal designs",
+      "woodenCarving": "Wooden Decorative Carving",
+      "woodenCarvingDesc": "Intricate wood carving from local juniper trees",
+      "traditionalCoffeeSet": "Traditional Coffee Set",
+      "coffeeSetDesc": "Complete coffee serving set with brass details",
+      "handwovenShawl": "Handwoven Shawl",
+      "shawlDesc": "Soft wool shawl with traditional Asiri patterns",
+      "ceramicVase": "Ceramic Decorative Vase",
+      "vaseDesc": "Hand-painted vase with mountain motifs"
+    },
+    "cart": {
+      "saduRug": "Handwoven Sadu Rug",
+      "saduRugDesc": "Traditional geometric pattern rug from Abha",
+      "palmBasket": "Palm Leaf Basket",
+      "palmBasketDesc": "Woven basket from locally sourced palm leaves"
+    },
+    "adra": {
+      "certified": "ADRA Certified",
+      "certifiedTitle": "ADRA Certified Masterpieces",
+      "certifiedDesc": "Exclusive collection of authentic crafts certified by ADRA for quality and heritage",
+      "participationTitle": "Participate in Heritage",
+      "participationDesc": "Contribute to preserving traditional crafts and cultural heritage",
+      "participate": "Participate",
+      "saduMasterpiece": "Sadu Masterpiece",
+      "saduMasterpieceDesc": "Exquisite handwoven Sadu rug by master artisans",
+      "heritagePottery": "Heritage Pottery Collection",
+      "heritagePotteryDesc": "Rare and valuable traditional pottery pieces",
+      "woodCarving": "Master Wood Carving",
+      "woodCarvingDesc": "Finely detailed wood carving representing heritage",
+      "silverJewelry": "Heritage Silver Jewelry",
+      "silverJewelryDesc": "Precious silver jewelry with historical significance"
+    },
+    "heritage": {
+      "participationTitle": "Participate in Heritage",
+      "participationDesc": "Contribute to preserving traditional crafts and cultural heritage",
+      "participate": "Participate"
+    }
+  },
+  "events": {
+    "title": "Events & Activities",
+    "description": "Discover exciting events and activities happening in your area and beyond",
+    "upcomingEvents": "Upcoming Events",
+    "seasonalHighlights": "Seasonal Highlights",
+    "communityEvents": "Community & Local Events",
+    "exclusiveByADRA": "Exclusive by ADRA"
+  },
+  "askLocal": {
+    "title": "Connect with Locals",
+    "description": "Get authentic local insights and experiences through direct connections with community members",
+    "liveGathering": {
+      "title": "Live Gathering",
+      "description": "Join interactive groups based on your area or interests",
+      "example1": "Travelers of Asir",
+      "example2": "Traditional Market Lovers",
+      "example3": "Coffee & Heritage Community",
+      "detail1": "Chat, ask questions, share experiences, or arrange spontaneous meetups",
+      "detail2": "Free and open to everyone — like Telegram groups, but within the app",
+      "joinGroup": "Join Community Group"
+    },
+    "liveAssistant": {
+      "title": "Live Assistant",
+      "description": "Get instant advice or help from local residents based on your needs",
+      "example1": "Translation services",
+      "example2": "Experience coordination",
+      "example3": "Recommendations and guidance",
+      "detail1": "Some offer services for free, others for a small fee",
+      "detail2": "Real-time assistance from knowledgeable locals",
+      "getHelp": "Get Instant Help"
+    },
+    "localHosts": {
+      "title": "Local Hosts & Families",
+      "description": "Experience authentic Saudi atmosphere with local families and hosts",
+      "example1": "Share a meal",
+      "example2": "Enjoy traditional coffee",
+      "example3": "Join weekend experiences",
+      "detail1": "Participate in social events like weddings",
+      "detail2": "Immerse yourself in genuine local culture",
+      "connectHost": "Connect with a Host"
+    },
+    "askAI": {
+      "title": "Ask AI Assistant",
+      "description": "Get instant recommendations and travel advice from our smart AI assistant",
+      "example1": "Best cultural experiences",
+      "example2": "Hidden local gems",
+      "example3": "Custom travel itineraries",
+      "detail1": "24/7 availability with instant responses",
+      "detail2": "Personalized suggestions based on your preferences",
+      "askNow": "Ask AI Now"
+    },
+    "examples": "Examples",
+    "community": {
+      "title": "Join Our Community",
+      "description": "Become part of a growing network of travelers and locals sharing authentic experiences",
+      "explore": "Explore Community Features"
+    }
+  },
+  "shorts": {
+    "title": "Shorts",
+    "video1": {
+      "title": "Traditional Crafts Workshop",
+      "description": "Learn ancient crafting techniques from local artisans in this hands-on workshop",
+      "author": "Crafts Community"
+    },
+    "video2": {
+      "title": "Local Food Experience",
+      "description": "Taste authentic Saudi cuisine prepared by traditional families in their homes",
+      "author": "Food Lovers"
+    },
+    "video3": {
+      "title": "Cultural Heritage Tour",
+      "description": "Explore ancient villages and experience authentic Saudi heritage and traditions",
+      "author": "Culture Guide"
+    }
+  },
+  "bookings": {
+    "title": "My Bookings",
+    "subtitle": "Manage your reservations and upcoming experiences",
+    "stats": {
+      "upcoming": "Upcoming",
+      "completed": "Completed",
+      "total": "Total Bookings"
+    },
+    "sections": {
+      "upcoming": "Upcoming Bookings",
+      "past": "Past Bookings"
+    },
+    "items": "items",
+    "status": {
+      "confirmed": "Confirmed",
+      "pending": "Pending",
+      "cancelled": "Cancelled",
+      "completed": "Completed"
+    },
+    "actions": {
+      "details": "View Details",
+      "manage": "Manage Booking",
+      "cancel": "Cancel Booking"
+    },
+    "empty": {
+      "upcoming": "No Upcoming Bookings",
+      "upcomingDesc": "You don't have any upcoming reservations. Start exploring experiences to book!",
+      "past": "No Past Bookings",
+      "pastDesc": "Your completed bookings will appear here after your experiences.",
+      "browse": "Browse Experiences"
+    },
+    "upcoming": {
+      "craftsWorkshop": "Traditional Crafts Workshop",
+      "culturalTour": "Cultural Heritage Tour"
+    },
+    "past": {
+      "traditionalCooking": "Traditional Cooking Class",
+      "heritageVillage": "Heritage Village Visit"
+    },
+    "locations": {
+      "riyadh": "Riyadh",
+      "jeddah": "Jeddah",
+      "makkah": "Makkah",
+      "madinah": "Madinah"
+    }
+  },
+  "favorites": {
+    "title": "Wishlist",
+    "subtitle": "Your saved experiences and favorite activities",
+    "items": "items",
+    "perPerson": "/person",
+    "showing": "Showing",
+    "of": "of",
+    "results": "results",
+    "categories": {
+      "all": "All Categories"
+    },
+    "sort": {
+      "recent": "Most Recent",
+      "priceLow": "Price: Low to High",
+      "priceHigh": "Price: High to Low",
+      "rating": "Highest Rated"
+    },
+    "actions": {
+      "view": "View",
+      "remove": "Remove from favorites"
+    },
+    "empty": {
+      "title": "Your Wishlist is Empty",
+      "description": "Save experiences you love by clicking the heart icon. They'll appear here for easy access.",
+      "browse": "Browse Experiences"
+    },
+    "recentlyViewed": "Recently Viewed",
+    "currency": "SAR",
+    "experiences": {
+      "craftsWorkshop": "Traditional Crafts Workshop",
+      "traditionalCooking": "Traditional Cooking Class",
+      "heritageTour": "Cultural Heritage Tour",
+      "natureHiking": "Mountain Hiking Adventure",
+      "localMarket": "Local Market Tour",
+      "artisansMeet": "Meet the Artisans Experience"
+    },
+    "descriptions": {
+      "craftsWorkshop": "Learn ancient crafting techniques from master artisans in a hands-on workshop",
+      "traditionalCooking": "Experience authentic Saudi cuisine prepared by traditional families",
+      "heritageTour": "Explore ancient villages and experience authentic Saudi heritage",
+      "natureHiking": "Scenic mountain hiking with local guides through beautiful landscapes",
+      "localMarket": "Visit traditional markets and discover local products and culture",
+      "artisansMeet": "Meet local craftsmen and learn about their traditional skills"
+    }
+  },
+  "profile": {
+    "title": "My Profile",
+    "subtitle": "Manage your account settings and preferences",
+    "tabs": {
+      "profile": "Profile",
+      "wallet": "Wallet",
+      "preferences": "Preferences",
+      "security": "Security",
+      "notifications": "Notifications"
+    },
+    "stats": {
+      "bookings": "Total Bookings",
+      "favorites": "Saved Experiences",
+      "memberSince": "Member Since",
+      "walletBalance": "Wallet Balance"
+    },
+    "contactInfo": "Contact Information",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "location": "Location",
+    "memberSince": "Member Since",
+    "preferences": {
+      "title": "Preferences",
+      "language": "Preferred Language",
+      "notifications": "Notifications",
+      "currency": "Currency",
+      "enabled": "Enabled",
+      "disabled": "Disabled"
+    },
+    "languages": {
+      "english": "English",
+      "arabic": "Arabic"
+    },
+    "currency": {
+      "sar": "SAR"
+    },
+    "security": {
+      "title": "Security Settings",
+      "password": "Password",
+      "passwordDesc": "Change your account password",
+      "twoFactor": "Two-Factor Authentication",
+      "twoFactorDesc": "Add an extra layer of security to your account",
+      "activeSessions": "Active Sessions",
+      "activeSessionsDesc": "View and manage your active sessions"
+    },
+    "notifications": {
+      "title": "Notification Preferences",
+      "email": "Email Notifications",
+      "emailDesc": "Receive important updates and announcements via email",
+      "push": "Push Notifications",
+      "pushDesc": "Get notifications on your mobile device",
+      "sms": "SMS Notifications",
+      "smsDesc": "Receive text messages for important updates"
+    },
+    "actions": {
+      "edit": "Edit",
+      "change": "Change",
+      "enable": "Enable",
+      "view": "View",
+      "save": "Save Changes",
+      "remove": "Remove"
+    },
+    "wallet": {
+      "title": "Digital Wallet",
+      "description": "Manage your payments and transactions",
+      "balance": "Current Balance",
+      "topUp": "Top Up",
+      "withdraw": "Withdraw",
+      "history": "History",
+      "recentTransactions": "Recent Transactions",
+      "viewAllTransactions": "View All Transactions",
+      "paymentMethods": "Payment Methods",
+      "addPaymentMethod": "Add Payment Method",
+      "expires": "Expires",
+      "bookingPayment": "Booking Payment",
+      "refund": "Refund",
+      "experiencePurchase": "Experience Purchase",
+      "walletTopUp": "Wallet Top-Up"
+    }
+  },
+  "services": {
+    "culture": {
+      "heritage_village_visit": "Heritage Village Visit",
+      "heritage_village_description": "Step back in time and experience life in a traditional village.",
+      "interactive_crafts": "Interactive Crafts Workshop",
+      "interactive_crafts_description": "Learn traditional crafts from skilled artisans.",
+      "ancient_castle_tour": "Ancient Castle Tour",
+      "castle_description": "Explore the ruins and history of ancient fortresses.",
+      "historic_buildings": "Historic Buildings Walk",
+      "buildings_description": "Admire the architectural beauty of old city structures.",
+      "national_museum": "National Museum",
+      "museum_description": "Journey through the region's history and artifacts.",
+      "cultural_center": "Cultural Center",
+      "center_description": "Experience contemporary art and cultural events."
+    },
+    "food": {
+      "traditional_kabsa": "Traditional Kabsa Experience",
+      "kabsa_description": "Authentic kabsa in a traditional family setting",
+      "kabsa_description2": "Authentic kabsa in a traditional family setting",
+      "saudi_coffee_experience": "Saudi Coffee Experience",
+      "coffee_description": "Traditional Saudi coffee and hininy in a majlis",
+      "local_mrqoq": "Local Mrqoq Tasting",
+      "mrqoq_description": "Experience traditional mrqoq in a local home",
+      "traditional_majlis": "Traditional Majlis Visit",
+      "majlis_description": "Experience authentic Saudi hospitality",
+      "crafts_cooking_class": "Crafts Cooking Class",
+      "crafts_description": "Learn to make traditional crafts like qursan or matbookh",
+      "traditional_desserts": "Traditional Desserts Class",
+      "desserts_description": "Learn to make local sweets and desserts",
+      "arabic_coffee_class": "Arabic Coffee Class",
+      "arabic_coffee_description": "Master the art of Arabic coffee preparation",
+      "family_cooking": "Family Cooking Experience",
+      "family_cooking_description": "Cook traditional dishes with local families",
+      "dates_market_tour": "Dates Market Tour",
+      "dates_market_description": "Visit traditional dates markets and learn about varieties",
+      "spices_market": "Spices Market Exploration",
+      "spices_description": "Explore local spice markets and their cultural significance",
+      "local_ingredients": "Local Ingredients Tour",
+      "ingredients_description": "Buy cooking ingredients with cultural storytelling",
+      "traditional_market": "Traditional Market Visit",
+      "traditional_market_description": "Experience vibrant local markets and shopping",
+      "dates_harvest": "Dates Harvest Experience",
+      "dates_harvest_description": "Harvest dates and prepare them with locals",
+      "vegetable_farm": "Vegetable Farm Visit",
+      "vegetable_description": "Harvest vegetables and cook with local farmers",
+      "sheep_farm": "Sheep Farm Experience",
+      "sheep_description": "Visit sheep farms and experience traditional barbecues",
+      "organic_farm": "Organic Farm Tour",
+      "organic_description": "Experience organic farming and fresh produce",
+      "olive_oil_factory": "Olive Oil Factory Visit",
+      "olive_oil_description": "Visit traditional olive oil production facilities",
+      "local_honey": "Local Honey Experience",
+      "honey_description": "Visit honey production sites with local beekeepers",
+      "coffee_roastery": "Coffee Roastery Tour",
+      "coffee_roastery_description": "Visit local coffee roasting facilities",
+      "dates_factory": "Dates Factory Visit",
+      "dates_factory_description": "Explore traditional dates processing facilities"
+    },
+    "nature": {
+      "hiking_adventure": "Hiking Adventure",
+      "hiking_description": "Scenic mountain hiking with local guides",
+      "camping_experience": "Camping Experience",
+      "camping_description": "Outdoor camping in beautiful natural locations",
+      "horse_riding": "Horse Riding Tour",
+      "horse_description": "Horseback riding through scenic trails",
+      "boat_tour": "Boat Tour",
+      "boat_description": "Boat tours in lakes and coastal areas",
+      "bird_watching": "Bird Watching",
+      "bird_description": "Bird watching in natural reserves",
+      "wildlife_safari": "Wildlife Safari",
+      "safari_description": "Wildlife observation in natural habitats",
+      "farm_stay": "Farm Stay Experience",
+      "farm_stay_description": "Spend a night at a traditional farm",
+      "traditional_house": "Traditional House Stay",
+      "house_description": "Stay in a traditional rural house",
+      "rural_life": "Rural Life Experience",
+      "rural_description": "Experience daily rural life with locals",
+      "heritage_farm": "Heritage Farm Visit",
+      "heritage_description": "Visit farms preserving traditional methods",
+      "park_bbq": "Park BBQ Gathering",
+      "park_description": "Barbecue gatherings in natural parks",
+      "mountain_gathering": "Mountain Gathering",
+      "mountain_description": "Outdoor gatherings in mountain areas",
+      "desert_camping": "Desert Camping",
+      "desert_description": "Camping experiences in desert landscapes",
+      "traditional_outdoor": "Traditional Outdoor Gathering",
+      "traditional_outdoor_description": "Traditional outdoor events with locals"
+    },
+    "crafts": {
+      "sadu_weaving": "Sadu Weaving Workshop",
+      "sadu_description": "Learn the traditional art of Sadu weaving from local experts",
+      "pottery_workshop": "Pottery Making Class",
+      "pottery_description": "Hands-on pottery workshop with master craftspeople",
+      "palm_weaving": "Palm Weaving Experience",
+      "palm_description": "Discover the ancient craft of palm leaf weaving",
+      "live_crafting": "Live Crafting Session",
+      "live_description": "Watch artisans create masterpieces in real-time",
+      "artisan_workshop": "Artisan's Workshop Visit",
+      "artisan_workshop_description": "Visit a local artisan's workshop to see crafts being made",
+      "tools_experience": "Traditional Tools Experience",
+      "tools_description": "Try using traditional crafting tools and techniques",
+      "artisan_stories": "Artisan Stories Session",
+      "stories_description": "Listen to artisans share their craft stories and heritage",
+      "master_class": "Master Artisan Class",
+      "master_description": "Advanced class with master artisans in their specialty",
+      "heritage_market": "Heritage Market Tour",
+      "heritage_description": "Explore traditional markets selling authentic crafts",
+      "handmade_products": "Handmade Products Fair",
+      "products_description": "Fair showcasing unique handmade crafts from local artisans",
+      "direct_purchase": "Direct from Artisan",
+      "purchase_description": "Buy directly from artisans at their workshops",
+      "traditional_bazaar": "Traditional Bazaar Visit",
+      "bazaar_description": "Experience the vibrant atmosphere of traditional craft bazaars",
+      "heritage_restoration": "Heritage Restoration Project",
+      "restoration_description": "Participate in preserving traditional craft techniques",
+      "heritage_donation": "Heritage Donation Program",
+      "donation_description": "Support heritage preservation through craft donations",
+      "traditional_preservation": "Traditional Preservation Initiative",
+      "preservation_description": "Learn about efforts to preserve traditional crafts"
+    },
+    "events": {
+      "flowers_festival": "Flowers Festival",
+      "flowers_description": "Annual celebration of blooming flowers with cultural performances",
+      "crafts_market": "Weekly Crafts Market",
+      "crafts_market_description": "Local artisans showcase their handmade crafts and products",
+      "football_match": "Football Match",
+      "football_description": "Exciting local football matches with professional teams",
+      "formula_race": "Formula Racing Event",
+      "formula_description": "High-speed racing action with professional drivers",
+      "music_concert": "Live Music Concert",
+      "concert_description": "Live performances by local and international artists",
+      "dates_season": "Dates Season",
+      "dates_description": "Celebration of date harvest season with local traditions",
+      "rain_festival": "Rain Festival",
+      "rain_description": "Festival celebrating the beautiful rainy season",
+      "riyadh_season": "Riyadh Season",
+      "riyadh_description": "Annual cultural season with diverse entertainment options",
+      "sports_festival": "Seasonal Sports Festival",
+      "sports_festival_description": "Various sports competitions and activities throughout the season",
+      "poetry_evening": "Poetry Evening",
+      "poetry_description": "Traditional poetry sessions with local poets",
+      "folk_show": "Folk Show",
+      "folk_description": "Traditional folk performances and cultural shows",
+      "village_celebration": "Village Celebration",
+      "village_description": "Community celebrations in traditional villages",
+      "community_marathon": "Community Marathon",
+      "marathon_description": "Local marathon event for all fitness levels",
+      "cycling_tour": "Cycling Tour",
+      "cycling_description": "Guided cycling tours through scenic routes",
+      "health_walk": "Health Walk",
+      "health_description": "Community health walks promoting wellness",
+      "interactive_tour": "Interactive Tour",
+      "interactive_description": "Engaging tours with hands-on cultural experiences",
+      "cultural_experience": "Cultural Experience",
+      "cultural_experience_description": "Coordinated cultural experiences with local artisans and chefs",
+      "nature_heritage": "Nature & Heritage Experience",
+      "nature_heritage_description": "Unique experiences combining nature, heritage, and light sports",
+      "sports_culture": "Sports & Culture Event",
+      "sports_culture_description": "Special events designed to blend sports with cultural activities"
+    }
+  },
+  "travel": {
+    "title": "MyPlan",
+    "description": "A curated itinerary to make the most of your cultural visit.",
+    "day": "Day",
+    "time": "Time",
+    "location": "Location",
+    "activities": "Activities",
+    "essentials": "Essentials",
+    "day1": {
+      "title": "Arrival & City Orientation",
+      "subtitle": "Getting settled and exploring the heart of the city.",
+      "activities": [
+        "Check-in at hotel",
+        "Welcome dinner at a local restaurant",
+        "Evening stroll through the old town"
+      ],
+      "time": "2:00 PM - 9:00 PM",
+      "location": "City Center",
+      "essentials": [
+        "Camera",
+        "Comfortable walking shoes"
+      ]
+    },
+    "day2": {
+      "title": "Historical Heritage Day",
+      "subtitle": "Dive deep into the past.",
+      "activities": [
+        "Morning visit to the National Museum",
+        "Guided tour of the Ancient Castle",
+        "Lunch at a traditional restaurant",
+        "Afternoon crafts workshop"
+      ],
+      "time": "9:00 AM - 5:00 PM",
+      "location": "Historic District",
+      "essentials": [
+        "Sunscreen",
+        "Water bottle",
+        "Notebook"
+      ]
+    },
+    "day3": {
+    "title": "Nature & Mountain Views",
+    "subtitle": "A refreshing day among scenic landscapes.",
+    "activities": [
+      "Scenic drive to the mountains",
+      "Picnic at the top viewpoint",
+      "Short hike through forest trails"
+    ],
+    "time": "10:00 AM - 6:00 PM",
+    "location": "Al-Soudah Highlands",
+    "essentials": [
+      "Jacket",
+      "Hiking shoes",
+      "Snacks"
+    ]
+  },
+  "day4": {
+    "title": "Local Culture & Community",
+    "subtitle": "Connect with locals and enjoy authentic experiences.",
+    "activities": [
+      "Meet a local guide through ADRA",
+      "Traditional breakfast at a village home",
+      "Participate in a honey harvesting session",
+      "Evening storytelling by a community elder"
+    ],
+    "time": "8:00 AM - 8:00 PM",
+    "location": "Local Village",
+    "essentials": [
+      "Respectful attire",
+      "Gift or thank-you gesture",
+      "Translation feature in app"
+    ]
+  },
+  "day5": {
+    "title": "Artisans & Marketplaces",
+    "subtitle": "Support and discover Asir’s creative spirit.",
+    "activities": [
+      "Visit the handicrafts market",
+      "Leather and textile demonstrations",
+      "Shop for handmade souvenirs",
+      "Talk to artisans using the ADRA AI translator"
+    ],
+    "time": "10:00 AM - 4:00 PM",
+    "location": "Cultural Market",
+    "essentials": [
+      "Cash",
+      "Tote bag",
+      "Camera for art photos"
+    ]
+  },
+  "day6": {
+    "title": "Rijal Almaa & Sunset Views",
+    "subtitle": "Explore one of Asir’s most iconic villages.",
+    "activities": [
+      "Drive to Rijal Almaa",
+      "Tour historic stone houses and museums",
+      "Enjoy coffee on a rooftop terrace",
+      "Capture sunset photos and ADRA Shorts"
+    ],
+    "time": "1:00 PM - 8:00 PM",
+    "location": "Rijal Almaa Village",
+    "essentials": [
+      "Phone or camera",
+      "Light sweater",
+      "ADRA app for audio guides"
+    ]
+  },
+  "day7": {
+    "title": "Reflection & Smart Summary",
+    "subtitle": "Wrap up your journey with insights and memories.",
+    "activities": [
+      "Relaxing morning at your stay",
+      "Review trip highlights with ADRA AI",
+      "Optional visit to local café for journaling",
+      "Receive personalized suggestions for future travels"
+    ],
+    "time": "8:00 AM - 12:00 PM",
+    "location": "City Center or Stay",
+    "essentials": [
+      "Internet connection",
+      "Notebook or app notes",
+      "Feedback form link"
+    ]
+  },
+      "assistant": {
+      "title": "Need Help Optimizing Your Plan?",
+      "description": "Our AI assistant can help tailor this plan to your preferences.",
+      "optimize": "Optimize Plan",
+      "add": "Add Activities",
+      "weather": "Check Weather"
+    }
+  },
+  "common": {
+    "currencyAlt": "Saudi Riyal Symbol"
+  }
 }
